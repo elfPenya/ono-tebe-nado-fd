@@ -8,7 +8,7 @@
 
 .header__logo-image {
   width: 149px;
-  height: 105px;
+  height: 104px;
 }
 
 .header__links-list {
@@ -48,8 +48,8 @@
   font-size: 18px;
   font-style: normal;
   line-height: 24px;
-  margin-right: 86px;
-  margin-bottom: 4px;
+  margin-right: 87px;
+  margin-bottom: 5px;
 }
 
 .contacts {
@@ -57,5 +57,81 @@
   border-bottom: 1px solid black;
 }
 
+.cover {
+  position: relative;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 1100px;
+  height: 757px;
+  z-index: -1;
+}
 
+.overlay {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+  height: 757px;
+  width: 1100px;
+}
 
+.cover__tittle {
+  position: relative;
+  color: #fff;
+  font-size: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.aligned-text {
+  position: absolute;
+  top: 164px;
+  left: 50px;
+}
+
+.aligned-text_center {
+  position: absolute;
+  top: 299px;
+  left: 381px;
+}
+
+.aligned-text_right {
+  position: absolute;
+  top: 434px;
+  left: 664px
+}
+
+.description {
+  display: flex;
+  gap: 60px;
+  justify-self:center;
+  color: #fff;
+  bottom: 0;
+}
+
+.cover__description-text {
+  position: absolute;
+  bottom: 61px;
+  left: 50px;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  word-spacing: 19px;
+}
+
+.alignment {
+  word-spacing: 18px;
+}
+
+.bet-button {
+  background: transparent;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 256px;
+  height: 51px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+}
