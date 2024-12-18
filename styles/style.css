@@ -64,6 +64,7 @@
   background-position: center;
   width: 1100px;
   height: 757px;
+  margin-bottom: 0px;
   z-index: -1;
 }
 
@@ -71,8 +72,10 @@
   position: absolute;
   background-color: #000;
   opacity: 0.6;
-  height: 757px;
-  width: 1100px;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  inset: 0;
 }
 
 .cover__tittle {
@@ -81,6 +84,7 @@
   font-size: 100px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
+  z-index: 1;
 }
 
 .aligned-text {
@@ -101,12 +105,11 @@
   left: 664px
 }
 
-.description {
+.cover__description {
   display: flex;
   gap: 60px;
   justify-self:center;
   color: #fff;
-  bottom: 0;
 }
 
 .cover__description-text {
@@ -134,4 +137,95 @@
   text-transform: uppercase;
   color: #fff;
   border: 1px solid #fff;
+}
+
+.lots {
+  position: relative;
+  width: 1052px;
+  height: 723px;
+  margin: auto;
+}
+
+.lots__heading {
+  position: absolute;
+  font-size: 40px;
+  top: 180px;
+  left: 40px;
+  text-transform: uppercase;
+}
+
+.lots__card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 254px;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+.card-link {
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  height: 100%;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  z-index: -1;
+}
+
+.card__title {
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  z-index: 1;
+}
+
+.card__text {
+  z-index: 1;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.lots__look-more-link {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  font-size: 20px;
+  text-underline-offset: 4px;
+  
+}
+
+.footer__menu-list {
+  list-style: none;
 }
