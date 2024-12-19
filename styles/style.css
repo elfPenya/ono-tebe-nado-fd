@@ -3,7 +3,8 @@
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   width: 1100px;
-  height: 293px;
+  padding-top: 93px;
+  padding-bottom: 92px;
 }
 
 .header__logo-image {
@@ -17,6 +18,7 @@
   padding-bottom: 6px;
   padding-left: 50px;
   font-size: 18px;
+  word-spacing: 2px;
   list-style: circle;
 }
 
@@ -29,27 +31,21 @@
   text-underline-offset: 4px;
 }
 
-.header__link_active {
+.header-link-active {
   text-decoration: none;
 }
 
-.check-lots__weight {
-  padding-left: 1px;
-}
-
-.about__weight {
-  padding-left: 4px;
-}
-
-.header__address {
-  display: block;
-  justify-self: end;
-  max-width: 240px;
-  margin-right: 87px;
+.address {
   margin-bottom: 5px;
   font-size: 18px;
   font-style: normal;
   line-height: 24px;
+}
+
+.header__address {
+  display: block;
+  justify-self: center;
+  padding-left: 100px;
 }
 
 .contacts {
@@ -59,9 +55,9 @@
 
 .cover {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
   margin-bottom: 180px;
   background-image: url(../images/cover.jpg);
   background-position: center;
@@ -71,7 +67,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   opacity: 0.6;
@@ -88,34 +84,34 @@
 }
 
 .aligned-text {
-  position: absolute;
-  top: 164px;
-  left: 50px;
+  display: block;
+  padding-top: 164px;
+  padding-left: 50px;
 }
 
 .aligned-text_center {
-  position: absolute;
-  top: 299px;
-  left: 381px;
+  display: block;
+  padding-top: 18px;
+  padding-left: 381px;
 }
 
 .aligned-text_right {
-  position: absolute;
-  top: 434px;
-  left: 664px;
+  display: block;
+  padding-top: 18px;
+  padding-left: 664px;
 }
 
 .cover__description {
   display: flex;
-  justify-self:center;
-  gap: 60px;
+  gap: 106px;
+  padding-top: 105px;
   color: #fff;
 }
 
 .cover__description-text {
-  position: absolute;
-  bottom: 61px;
-  left: 50px;
+  z-index: 1;
+  padding-top: 12px;
+  padding-left: 50px;
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
@@ -127,13 +123,12 @@
 }
 
 .bet-button {
-  position: absolute;
-  right: 50px;
-  bottom: 50px;
+  z-index: 1;
   width: 256px;
   height: 51px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   background: transparent;
@@ -142,13 +137,12 @@
 .lots {
   position: relative;
   width: 100%;
-  height: 723px;
+  min-height: 723px;
   margin-bottom: 120px;
 }
 
 .lots__heading {
-  position: absolute;
-  left: 64px;
+  padding-left: 64px;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -156,9 +150,11 @@
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
-  padding-top: 74px;
+  margin-bottom: 29px;
+  padding-top: 27px;
+  padding-left: 24px;
   list-style: none;
 }
 
@@ -166,7 +162,6 @@
   position: relative;
   width: 334px;
   min-height: 596px;
-
 }
 
 .card-link {
@@ -176,13 +171,15 @@
 
 .card {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding: 48px 40px;
   color: #fff;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__title {
@@ -202,29 +199,20 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .lots__look-more-link {
-  position: relative;
-  top: 30px;
-  left: 64px;
+  padding-left: 64px;
   font-size: 20px;
   text-underline-offset: 4px;
-  
 }
 
 .about {
@@ -233,7 +221,6 @@
   grid-template-rows: 595px 1fr;
   justify-items: center;
   width: 100%;
-  height: 595px;
   margin-bottom: 180px;
   padding-right: 24px;
   padding-left: 24px;
@@ -268,14 +255,9 @@
   line-height: 24px;
 }
 
-.first-text {
+.about-text-position {
   margin-bottom: 24px;
   padding-top: 100px;
-}
-
-.second-text {
-  font-size: 20px;
-  line-height: 24px;
 }
 
 .footer {
@@ -288,9 +270,6 @@
 .footer__address {
   padding-top: 1px;
   padding-left: 50px;
-  font-size: 18px;
-  font-style: normal;
-  line-height: 24px;
 }
 
 .footer__menu {
